@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Answer View Controller-->
+        <scene sceneID="E2v-Py-7UH">
+            <objects>
+                <viewController storyboardIdentifier="answerView" id="1UC-0o-qkP" customClass="AnswerViewController" customModule="ItQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PGX-75-5tb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="answer view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-kg-4yB">
+                                <rect key="frame" x="0.0" y="174" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cwi-i0-2hd" firstAttribute="trailing" secondItem="USQ-kg-4yB" secondAttribute="trailing" id="9rn-yi-Gkv"/>
+                            <constraint firstItem="USQ-kg-4yB" firstAttribute="leading" secondItem="Cwi-i0-2hd" secondAttribute="leading" id="cH8-xe-hLv"/>
+                            <constraint firstItem="USQ-kg-4yB" firstAttribute="top" secondItem="Cwi-i0-2hd" secondAttribute="top" constant="154" id="fND-eF-5zc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cwi-i0-2hd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0S-LJ-nD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="42"/>
+        </scene>
+    </scenes>
+</document>

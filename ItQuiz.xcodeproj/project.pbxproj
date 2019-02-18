@@ -14,6 +14,14 @@
 		284C52C92202C9E900EC1804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284C52C72202C9E900EC1804 /* LaunchScreen.storyboard */; };
 		284C52D42202C9EA00EC1804 /* ItQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C52D32202C9EA00EC1804 /* ItQuizTests.swift */; };
 		284C52DF2202C9EA00EC1804 /* ItQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C52DE2202C9EA00EC1804 /* ItQuizUITests.swift */; };
+		284C52ED2202DB1200EC1804 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C52EC2202DB1200EC1804 /* StartViewController.swift */; };
+		284C52EF2202DB4B00EC1804 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C52EE2202DB4B00EC1804 /* QuizViewController.swift */; };
+		284C52F12202DB8900EC1804 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C52F02202DB8900EC1804 /* ResultViewController.swift */; };
+		284C52F52202E6AA00EC1804 /* QuizItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C52F42202E6AA00EC1804 /* QuizItem.swift */; };
+		284C52F72202E72E00EC1804 /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284C52F62202E72E00EC1804 /* QuizCategory.swift */; };
+		28E634C6220D36B8001D73E7 /* Answer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E634C5220D36B8001D73E7 /* Answer.storyboard */; };
+		28E96F9C220D4A9B007E0182 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E96F9B220D4A9B007E0182 /* AnswerViewController.swift */; };
+		28E96F9E220D612F007E0182 /* QuizListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E96F9D220D612F007E0182 /* QuizListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		284C52DA2202C9EA00EC1804 /* ItQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		284C52DE2202C9EA00EC1804 /* ItQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItQuizUITests.swift; sourceTree = "<group>"; };
 		284C52E02202C9EA00EC1804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284C52EC2202DB1200EC1804 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		284C52EE2202DB4B00EC1804 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		284C52F02202DB8900EC1804 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		284C52F42202E6AA00EC1804 /* QuizItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizItem.swift; sourceTree = "<group>"; };
+		284C52F62202E72E00EC1804 /* QuizCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCategory.swift; sourceTree = "<group>"; };
+		28E634C5220D36B8001D73E7 /* Answer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Answer.storyboard; sourceTree = "<group>"; };
+		28E96F9B220D4A9B007E0182 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		28E96F9D220D612F007E0182 /* QuizListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +119,14 @@
 				284C52C52202C9E900EC1804 /* Assets.xcassets */,
 				284C52C72202C9E900EC1804 /* LaunchScreen.storyboard */,
 				284C52CA2202C9E900EC1804 /* Info.plist */,
+				284C52EC2202DB1200EC1804 /* StartViewController.swift */,
+				284C52EE2202DB4B00EC1804 /* QuizViewController.swift */,
+				284C52F02202DB8900EC1804 /* ResultViewController.swift */,
+				284C52F42202E6AA00EC1804 /* QuizItem.swift */,
+				284C52F62202E72E00EC1804 /* QuizCategory.swift */,
+				28E634C5220D36B8001D73E7 /* Answer.storyboard */,
+				28E96F9B220D4A9B007E0182 /* AnswerViewController.swift */,
+				28E96F9D220D612F007E0182 /* QuizListViewController.swift */,
 			);
 			path = ItQuiz;
 			sourceTree = "<group>";
@@ -229,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E634C6220D36B8001D73E7 /* Answer.storyboard in Resources */,
 				284C52C92202C9E900EC1804 /* LaunchScreen.storyboard in Resources */,
 				284C52C62202C9E900EC1804 /* Assets.xcassets in Resources */,
 				284C52C42202C9E800EC1804 /* Main.storyboard in Resources */,
@@ -256,8 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284C52F12202DB8900EC1804 /* ResultViewController.swift in Sources */,
+				284C52F72202E72E00EC1804 /* QuizCategory.swift in Sources */,
 				284C52C12202C9E800EC1804 /* ViewController.swift in Sources */,
 				284C52BF2202C9E800EC1804 /* AppDelegate.swift in Sources */,
+				28E96F9C220D4A9B007E0182 /* AnswerViewController.swift in Sources */,
+				28E96F9E220D612F007E0182 /* QuizListViewController.swift in Sources */,
+				284C52F52202E6AA00EC1804 /* QuizItem.swift in Sources */,
+				284C52ED2202DB1200EC1804 /* StartViewController.swift in Sources */,
+				284C52EF2202DB4B00EC1804 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55235PP6D8;
 				INFOPLIST_FILE = ItQuiz/Info.plist;
@@ -441,6 +474,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.liqd-igarashi-dev190131.ItQuiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55235PP6D8;
 				INFOPLIST_FILE = ItQuiz/Info.plist;
@@ -459,6 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.liqd-igarashi-dev190131.ItQuiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

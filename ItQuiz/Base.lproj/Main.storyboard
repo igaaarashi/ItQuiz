@@ -1,24 +1,314 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="toQuiz" id="BYZ-38-t0r" customClass="StartViewController" customModule="ItQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ITクイズを始めるよ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfZ-5i-p9b">
+                                <rect key="frame" x="30" y="263" width="315" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zWi-im-Lzp">
+                                <rect key="frame" x="0.0" y="445" width="375" height="222"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="OkO-yx-Kz6"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="jCE-tJ-Ljh">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jCE-tJ-Ljh" id="0SV-B9-0Gh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hfZ-5i-p9b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="243" id="0IE-fC-vTt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zWi-im-Lzp" secondAttribute="bottom" id="HTA-H1-LLE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zWi-im-Lzp" secondAttribute="trailing" id="cXc-Rp-rwg"/>
+                            <constraint firstItem="hfZ-5i-p9b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gq5-la-44Q"/>
+                            <constraint firstItem="zWi-im-Lzp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jLm-1X-jDZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hfZ-5i-p9b" secondAttribute="trailing" constant="30" id="vgd-hX-qhY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="zWi-im-Lzp" id="Fvt-oo-qFb"/>
+                        <segue destination="CHO-XR-fgd" kind="show" identifier="toQuiz" id="NeD-4d-9we"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-884" y="8"/>
+        </scene>
+        <!--Quiz List View Controller-->
+        <scene sceneID="JZy-y9-ut8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqf-tC-C1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="AjJ-Zn-qxK" customClass="QuizListViewController" customModule="ItQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kXq-TS-QDi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kUV-Vb-zug">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Q9M-5l-v1E">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="quizCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q9M-5l-v1E" id="b5l-da-DE1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kUV-Vb-zug" firstAttribute="top" secondItem="Owl-v5-bR9" secondAttribute="top" id="5JY-zQ-wSZ"/>
+                            <constraint firstItem="Owl-v5-bR9" firstAttribute="trailing" secondItem="kUV-Vb-zug" secondAttribute="trailing" id="9yg-qP-Gqn"/>
+                            <constraint firstItem="kUV-Vb-zug" firstAttribute="leading" secondItem="Owl-v5-bR9" secondAttribute="leading" id="Ubv-Nd-w46"/>
+                            <constraint firstItem="Owl-v5-bR9" firstAttribute="bottom" secondItem="kUV-Vb-zug" secondAttribute="bottom" id="rYv-24-VgQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Owl-v5-bR9"/>
+                    </view>
+                    <connections>
+                        <outlet property="quizTable" destination="kUV-Vb-zug" id="Cgt-Kh-eDx"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-750" y="711"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="wiZ-WB-g2E">
+            <objects>
+                <viewController id="CHO-XR-fgd" customClass="QuizViewController" customModule="ItQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GP5-ZO-YLt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rau-Cd-c8A">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem title="＜戻る" id="cbD-0x-aqA">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="8d0-tm-cWh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9w-58-P1Q">
+                                <rect key="frame" x="15" y="79" width="345" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAH-5p-AsS">
+                                <rect key="frame" x="15" y="447" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="t5L-lN-eER"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="aAnswerAction:" destination="CHO-XR-fgd" eventType="touchUpInside" id="iJS-Ug-mfP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IJ-DH-E4K">
+                                <rect key="frame" x="15" y="502" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hPW-nu-bht"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="B">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="bAnswerAction:" destination="CHO-XR-fgd" eventType="touchUpInside" id="rLd-Bc-Nxb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRm-pL-1TU">
+                                <rect key="frame" x="15" y="557" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ezJ-ye-5ti"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cAnswerAction:" destination="CHO-XR-fgd" eventType="touchUpInside" id="vdP-ac-MBC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSa-ms-Wd2">
+                                <rect key="frame" x="15" y="612" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yJW-yU-jdN"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dAnswerAction:" destination="CHO-XR-fgd" eventType="touchUpInside" id="5oR-15-RL5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zrS-JZ-bvc" firstAttribute="trailing" secondItem="KAH-5p-AsS" secondAttribute="trailing" constant="15" id="1Qq-6f-xOc"/>
+                            <constraint firstItem="3IJ-DH-E4K" firstAttribute="top" secondItem="KAH-5p-AsS" secondAttribute="bottom" constant="15" id="620-I2-yOv"/>
+                            <constraint firstItem="zrS-JZ-bvc" firstAttribute="trailing" secondItem="pRm-pL-1TU" secondAttribute="trailing" constant="15" id="6jQ-am-31C"/>
+                            <constraint firstItem="rau-Cd-c8A" firstAttribute="trailing" secondItem="zrS-JZ-bvc" secondAttribute="trailing" id="8Gr-pZ-Znr"/>
+                            <constraint firstItem="pRm-pL-1TU" firstAttribute="top" secondItem="3IJ-DH-E4K" secondAttribute="bottom" constant="15" id="8V0-Pp-fBi"/>
+                            <constraint firstItem="rau-Cd-c8A" firstAttribute="leading" secondItem="zrS-JZ-bvc" secondAttribute="leading" id="8q2-8f-hOb"/>
+                            <constraint firstItem="zrS-JZ-bvc" firstAttribute="bottom" secondItem="QSa-ms-Wd2" secondAttribute="bottom" constant="15" id="E85-Ck-tSO"/>
+                            <constraint firstItem="3IJ-DH-E4K" firstAttribute="leading" secondItem="zrS-JZ-bvc" secondAttribute="leading" constant="15" id="L9F-kV-Dq4"/>
+                            <constraint firstItem="rau-Cd-c8A" firstAttribute="top" secondItem="zrS-JZ-bvc" secondAttribute="top" id="OKx-MQ-9wm"/>
+                            <constraint firstItem="zrS-JZ-bvc" firstAttribute="trailing" secondItem="QSa-ms-Wd2" secondAttribute="trailing" constant="15" id="RLz-QB-CG1"/>
+                            <constraint firstItem="QSa-ms-Wd2" firstAttribute="leading" secondItem="zrS-JZ-bvc" secondAttribute="leading" constant="15" id="SeS-QX-aXo"/>
+                            <constraint firstItem="QSa-ms-Wd2" firstAttribute="top" secondItem="pRm-pL-1TU" secondAttribute="bottom" constant="15" id="dEP-wh-8QS"/>
+                            <constraint firstItem="b9w-58-P1Q" firstAttribute="leading" secondItem="zrS-JZ-bvc" secondAttribute="leading" constant="15" id="gGH-U6-5oP"/>
+                            <constraint firstItem="zrS-JZ-bvc" firstAttribute="trailing" secondItem="b9w-58-P1Q" secondAttribute="trailing" constant="15" id="oDi-rK-TTD"/>
+                            <constraint firstItem="b9w-58-P1Q" firstAttribute="top" secondItem="rau-Cd-c8A" secondAttribute="bottom" constant="15" id="qqL-wr-Q2e"/>
+                            <constraint firstItem="KAH-5p-AsS" firstAttribute="leading" secondItem="zrS-JZ-bvc" secondAttribute="leading" constant="15" id="whb-VD-KRI"/>
+                            <constraint firstItem="zrS-JZ-bvc" firstAttribute="trailing" secondItem="3IJ-DH-E4K" secondAttribute="trailing" constant="15" id="ydU-Vv-n0B"/>
+                            <constraint firstItem="pRm-pL-1TU" firstAttribute="leading" secondItem="zrS-JZ-bvc" secondAttribute="leading" constant="15" id="zpf-oo-4wy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zrS-JZ-bvc"/>
+                    </view>
+                    <connections>
+                        <outlet property="aAnswerButton" destination="KAH-5p-AsS" id="SdM-Ty-Aal"/>
+                        <outlet property="bAnswerButton" destination="3IJ-DH-E4K" id="e5Z-cr-VEs"/>
+                        <outlet property="cAnswerButton" destination="pRm-pL-1TU" id="RAQ-MU-Lxq"/>
+                        <outlet property="dAnswerButton" destination="QSa-ms-Wd2" id="jJV-bK-Wd8"/>
+                        <outlet property="quizText" destination="b9w-58-P1Q" id="pOH-6A-rFU"/>
+                        <segue destination="GMO-dx-mLu" kind="show" identifier="toResult" id="koU-cz-i2g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxk-6o-5Zl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="36.431784107946029"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="kKV-db-5OU">
+            <objects>
+                <viewController id="GMO-dx-mLu" customClass="ResultViewController" customModule="ItQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ECF-Er-Svs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtm-MB-xXq">
+                                <rect key="frame" x="15" y="612" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NHQ-1B-tH1"/>
+                                </constraints>
+                                <state key="normal" title="TOPに戻る">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="1Xz-5I-3cT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IED-dq-Ahe">
+                                <rect key="frame" x="15" y="557" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ije-nQ-Pbf"/>
+                                </constraints>
+                                <state key="normal" title="もう一度">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CHO-XR-fgd" kind="show" id="3zx-8M-UsH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの正解数は○問です。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0Z-BR-oyO">
+                                <rect key="frame" x="76.5" y="323.5" width="222.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXd-4H-o6m">
+                                <rect key="frame" x="15" y="502" width="345" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gNc-GQ-m3Q"/>
+                                </constraints>
+                                <state key="normal" title="答え合わせをする">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B7d-4D-lvW" kind="show" id="31S-9a-aEp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jtm-MB-xXq" firstAttribute="top" secondItem="IED-dq-Ahe" secondAttribute="bottom" constant="15" id="0K4-2B-4mX"/>
+                            <constraint firstItem="Tb1-ep-zuJ" firstAttribute="trailing" secondItem="IED-dq-Ahe" secondAttribute="trailing" constant="15" id="21a-ih-mlF"/>
+                            <constraint firstItem="Tb1-ep-zuJ" firstAttribute="trailing" secondItem="jtm-MB-xXq" secondAttribute="trailing" constant="15" id="9lT-Pn-Wxc"/>
+                            <constraint firstItem="Tb1-ep-zuJ" firstAttribute="bottom" secondItem="jtm-MB-xXq" secondAttribute="bottom" constant="15" id="ATi-rG-17n"/>
+                            <constraint firstItem="IED-dq-Ahe" firstAttribute="leading" secondItem="Tb1-ep-zuJ" secondAttribute="leading" constant="15" id="ENe-TC-a3g"/>
+                            <constraint firstItem="jtm-MB-xXq" firstAttribute="leading" secondItem="Tb1-ep-zuJ" secondAttribute="leading" constant="15" id="Ohz-QF-ie7"/>
+                            <constraint firstItem="X0Z-BR-oyO" firstAttribute="centerX" secondItem="ECF-Er-Svs" secondAttribute="centerX" id="P2e-Qm-WAE"/>
+                            <constraint firstItem="Tb1-ep-zuJ" firstAttribute="trailing" secondItem="KXd-4H-o6m" secondAttribute="trailing" constant="15" id="Ua1-57-6yf"/>
+                            <constraint firstItem="IED-dq-Ahe" firstAttribute="top" secondItem="KXd-4H-o6m" secondAttribute="bottom" constant="15" id="YkI-Q2-qz4"/>
+                            <constraint firstItem="KXd-4H-o6m" firstAttribute="leading" secondItem="Tb1-ep-zuJ" secondAttribute="leading" constant="15" id="fxr-go-wFs"/>
+                            <constraint firstItem="X0Z-BR-oyO" firstAttribute="centerY" secondItem="ECF-Er-Svs" secondAttribute="centerY" id="p1V-fW-ZVv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tb1-ep-zuJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultText" destination="X0Z-BR-oyO" id="h8I-wl-wJR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BYy-XQ-wEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="36"/>
+        </scene>
+        <!--answerView-->
+        <scene sceneID="Ktf-Rh-E7m">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Answer" referencedIdentifier="answerView" id="B7d-4D-lvW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wfn-Sy-anX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="-241"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NeD-4d-9we"/>
+        <segue reference="1Xz-5I-3cT"/>
+    </inferredMetricsTieBreakers>
 </document>
